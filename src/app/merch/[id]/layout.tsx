@@ -1,49 +1,49 @@
-import type { Metadata } from "next";
+import React from 'react';
 import { merchProducts } from "../../../data/merchProducts";
+import { Metadata, Viewport } from "next";
 
 // Base URL for the site
-const baseUrl = "https://clivecoin.com";
+const baseUrl = process.env.VERCEL_URL
+  ? `https://${process.env.VERCEL_URL}`
+  : "http://localhost:3000";
 
 type Props = {
-  params: { id: string }
+  params: Promise<{ id: string }>
 }
+
+// Shared viewport config for all product pages
+export const viewport: Viewport = {
+  themeColor: "#000000",
+};
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   // Find the product
-  const product = merchProducts.find(p => p.id === params.id);
+  const { id } = await params;
+  const product = merchProducts.find(p => p.id === id);
   
   // Default metadata if product not found
   if (!product) {
     return {
-      title: "Product Not Found - CLIVECOIN Merchandise",
-      description: "The requested product could not be found in our CLIVECOIN merchandise store.",
-      themeColor: "#000000",
-      alternates: {
-        canonical: '/merch',
-      }
+      title: "Product Not Found | CLIVE Merchandise",
+      description: "The product you're looking for doesn't exist."
     };
   }
   
   // Return product-specific metadata
   return {
-    title: `${product.title} - CLIVECOIN Merchandise`,
-    description: `${product.title} - Official CLIVECOIN merchandise. ${product.comingSoon ? 'Coming soon!' : 'Available now!'} Price: ${product.price}`,
-    themeColor: "#000000",
+    title: `${product.title} | CLIVE Merchandise`,
+    description: `Get your hands on the exclusive ${product.title}. Official CLIVE merchandise.`,
     openGraph: {
-      title: `${product.title} - CLIVECOIN Merchandise`,
-      description: `${product.title} - Official CLIVECOIN merchandise. ${product.comingSoon ? 'Coming soon!' : 'Available now!'} Price: ${product.price}`,
-      url: `${baseUrl}/merch/${params.id}`,
+      title: `${product.title} | CLIVE Merchandise`,
+      description: `Get your hands on the exclusive ${product.title}. Official CLIVE merchandise.`,
       images: [
         {
-          url: product.imageUrl,
-          width: 500,
-          height: 500,
-          alt: product.title,
+          url: `${baseUrl}${product.imageUrl}`,
+          width: 1200,
+          height: 630,
+          alt: product.title
         }
-      ],
-    },
-    alternates: {
-      canonical: `/merch/${params.id}`,
+      ]
     }
   };
 }

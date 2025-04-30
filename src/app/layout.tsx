@@ -2,7 +2,11 @@ import type { Metadata } from "next";
 import "./globals.css";
 import ClientLayout from "../components/ClientLayout";
 
+// Base URL for the site
+const baseUrl = "https://clivecoin.com";
+
 export const metadata: Metadata = {
+  metadataBase: new URL(baseUrl),
   title: "CLIVECOIN - Australia's First Political Meme Coin",
   description: "Australia's First Political Meme Coin. Buy the dip, ride the hype, meme the future.",
   keywords: ["CLIVECOIN", "Clive Palmer", "Australia", "cryptocurrency", "meme coin", "political", "token"],
@@ -29,7 +33,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "CLIVECOIN - Australia's First Political Meme Coin",
     description: "Australia's First Political Meme Coin. Buy the dip, ride the hype, meme the future.",
-    url: "https://clivecoin.com",
+    url: baseUrl,
     siteName: "CLIVECOIN",
     images: [
       {
@@ -46,11 +50,32 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "CLIVECOIN - Australia's First Political Meme Coin",
     description: "Australia's First Political Meme Coin. Buy the dip, ride the hype, meme the future.",
+    site: "@clivescoin",
+    creator: "@clivescoin",
     images: ["/icon.png"],
   },
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  alternates: {
+    canonical: '/',
+  },
+  other: {
+    "og:image:width": "192",
+    "og:image:height": "192",
+    "og:type": "website",
+    "og:site_name": "CLIVECOIN",
+    "og:locale": "en_AU",
+    "twitter:dnt": "on",
+    "fb:app_id": "", // Add your Facebook App ID if you have one
+    "article:publisher": "https://x.com/clivescoin?s=21",
   },
 };
 

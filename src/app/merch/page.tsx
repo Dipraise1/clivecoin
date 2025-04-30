@@ -6,11 +6,21 @@ import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import ProductCard from '../../components/ProductCard';
 import ClientBackgroundAnimation from '../../components/ClientBackgroundAnimation';
+import BreadcrumbJsonLd from '../../components/BreadcrumbJsonLd';
 import { merchProducts } from '../../data/merchProducts';
 
 export default function MerchPage() {
+  const domain = "https://clivecoin.com"; // Update this with your actual domain
+  const breadcrumbItems = [
+    { name: "Home", item: "/" },
+    { name: "Merchandise", item: "/merch" }
+  ];
+  
   return (
-    <div className="min-h-screen bg-[#FFFF00]">
+    <div className="min-h-screen bg-black text-[#FFFF00]">
+      {/* Add structured data for SEO */}
+      <BreadcrumbJsonLd domain={domain} items={breadcrumbItems} />
+      
       <ClientBackgroundAnimation />
       <Header />
       
@@ -21,10 +31,10 @@ export default function MerchPage() {
           transition={{ duration: 0.5 }}
           className="max-w-6xl mx-auto"
         >
-          <h1 className="text-4xl md:text-6xl font-black mb-3 text-center">CLIVE MERCH</h1>
+          <h1 className="text-4xl md:text-6xl font-black mb-3 text-center text-[#FFFF00]">CLIVE MERCH</h1>
           
           <motion.p 
-            className="text-xl mb-12 text-center max-w-2xl mx-auto"
+            className="text-xl mb-12 text-center max-w-2xl mx-auto text-[#FFFF00]/90"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.2 }}
@@ -54,7 +64,7 @@ export default function MerchPage() {
           </div>
           
           <motion.div 
-            className="bg-black text-[#FFFF00] p-8 rounded-xl my-12"
+            className="bg-[#FFFF00] text-black p-8 rounded-xl my-12"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5 }}
@@ -70,7 +80,7 @@ export default function MerchPage() {
                 href="https://t.me/clivescoin" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="bg-[#FFFF00] text-black px-6 py-3 rounded-lg font-bold hover:bg-[#e6e600] transition-colors mx-2"
+                className="bg-black text-[#FFFF00] px-6 py-3 rounded-lg font-bold hover:bg-black/80 transition-colors mx-2"
               >
                 Join Telegram
               </a>
@@ -78,7 +88,7 @@ export default function MerchPage() {
                 href="https://x.com/clivescoin?s=21" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="bg-[#FFFF00] text-black px-6 py-3 rounded-lg font-bold hover:bg-[#e6e600] transition-colors mx-2"
+                className="bg-black text-[#FFFF00] px-6 py-3 rounded-lg font-bold hover:bg-black/80 transition-colors mx-2"
               >
                 Follow on X
               </a>

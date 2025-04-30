@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+@import "tailwindcss";
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 255, 255, 0;
+  --background-end-rgb: 255, 255, 0;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-start-rgb));
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Mobile optimization */
+@media (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+/* Better touch feedback */
+@media (hover: none) {
+  .hover-effect {
+    transition: transform 0.2s, opacity 0.2s;
+  }
+  
+  .hover-effect:active {
+    opacity: 0.8;
+    transform: scale(0.97);
+  }
+}
+
+@layer utilities {
+  .marquee-container {
+    @apply overflow-hidden whitespace-nowrap py-4;
+  }
+  
+  .button-primary {
+    @apply bg-black text-[#FFFF00] font-bold px-8 py-4 
+    hover:scale-105 transition-transform uppercase tracking-wider;
+  }
+  
+  .mobile-padding {
+    @apply px-4 md:px-6 lg:px-8;
+  }
+  
+  .responsive-container {
+    @apply w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+}

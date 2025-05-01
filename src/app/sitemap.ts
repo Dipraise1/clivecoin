@@ -1,6 +1,9 @@
 import { MetadataRoute } from 'next';
 import { merchProducts } from '../data/merchProducts';
 
+// Add this for static export compatibility
+export const dynamic = 'force-static';
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://clivecoin.com';
   
@@ -32,6 +35,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: currentDate,
       changeFrequency: 'monthly',
       priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/buy`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly',
+      priority: 0.9,
     },
   ] as MetadataRoute.Sitemap;
   

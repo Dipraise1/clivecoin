@@ -40,7 +40,7 @@ export const merchProducts: MerchProduct[] = [
     title: 'Limited Edition CLIVE Poster',
     price: '$14.99',
     imageUrl: '/images/merch/poster-placeholder.svg',
-    comingSoon: true
+    comingSoon: false
   },
   {
     id: 'clive-stickers',

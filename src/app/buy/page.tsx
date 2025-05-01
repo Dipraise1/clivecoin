@@ -49,7 +49,7 @@ export default function BuyPage() {
             >
               <h2 className="text-2xl font-bold mb-6 flex items-center">
                 <span className="bg-[#FFFF00] text-black w-8 h-8 rounded-full flex items-center justify-center mr-3 text-lg font-black">1</span>
-                Via Jupiter Swap
+                Via Phantom Web
               </h2>
               
               <ul className="space-y-4 mb-8">
@@ -59,7 +59,7 @@ export default function BuyPage() {
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
                   </div>
-                  <span>Fast and easy swap directly on Jupiter DEX</span>
+                  <span>Quick and easy token purchase via Phantom web</span>
                 </li>
                 <li className="flex items-start">
                   <div className="bg-[#FFFF00]/20 p-1 rounded-full mt-1 mr-3">
@@ -67,7 +67,7 @@ export default function BuyPage() {
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
                   </div>
-                  <span>Best price routing across multiple DEXs</span>
+                  <span>Works with the most popular Solana wallet</span>
                 </li>
                 <li className="flex items-start">
                   <div className="bg-[#FFFF00]/20 p-1 rounded-full mt-1 mr-3">
@@ -75,18 +75,18 @@ export default function BuyPage() {
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
                   </div>
-                  <span>Works with most Solana wallets</span>
+                  <span>Secure and trusted platform</span>
                 </li>
               </ul>
               
               <a 
-                href="https://jup.ag/swap/SOL-GFVmiDwaWusNRE5pv1BSPpjTpsaWaByrsSM4dDjCpump" 
+                href="https://phantom.com/tokens/solana/GFVmiDwaWusNRE5pv1BSPpjTpsaWaByrsSM4dDjCpump?referralId=efgft7u3se" 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block w-full"
               >
                 <AnimatedButton color="yellow" className="w-full justify-center">
-                  Buy on Jupiter
+                  Buy with Phantom Web
                 </AnimatedButton>
               </a>
             </motion.div>

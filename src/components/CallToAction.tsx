@@ -71,7 +71,7 @@ const CallToAction = () => {
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.4 }}
         >
-          <a href="https://jup.ag/swap/SOL-GFVmiDwaWusNRE5pv1BSPpjTpsaWaByrsSM4dDjCpump" target="_blank" rel="noopener noreferrer">
+          <a href="https://phantom.com/tokens/solana/GFVmiDwaWusNRE5pv1BSPpjTpsaWaByrsSM4dDjCpump?referralId=efgft7u3se" target="_blank" rel="noopener noreferrer">
             <AnimatedButton color="yellow">
               BUY $CLIVE NOW
             </AnimatedButton>

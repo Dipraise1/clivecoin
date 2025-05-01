@@ -133,12 +133,12 @@ export default function ContractAddressPage() {
               View on Solscan
             </a>
             <a 
-              href="https://jup.ag/swap/SOL-GFVmiDwaWusNRE5pv1BSPpjTpsaWaByrsSM4dDjCpump" 
+              href="https://phantom.com/tokens/solana/GFVmiDwaWusNRE5pv1BSPpjTpsaWaByrsSM4dDjCpump?referralId=efgft7u3se" 
               target="_blank" 
               rel="noopener noreferrer"
               className="inline-block bg-black text-[#FFFF00] px-6 py-3 rounded-lg font-bold hover:bg-opacity-90 transition-all"
             >
-              Buy on Jupiter
+              Buy with Phantom
             </a>
           </motion.div>
         </motion.div>

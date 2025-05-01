@@ -104,7 +104,7 @@ const Header = () => {
               className="ml-2"
             >
               <a 
-                href="https://jup.ag/swap/SOL-GFVmiDwaWusNRE5pv1BSPpjTpsaWaByrsSM4dDjCpump"
+                href="https://phantom.com/tokens/solana/GFVmiDwaWusNRE5pv1BSPpjTpsaWaByrsSM4dDjCpump?referralId=efgft7u3se"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-[#FFFF00] text-black px-5 py-2 rounded-lg font-bold transition-all hover:bg-[#e6e600] hover:shadow-lg hover:shadow-[#FFFF00]/20"
@@ -121,7 +121,7 @@ const Header = () => {
               className="sm:block mr-4"
             >
               <a 
-                href="https://jup.ag/swap/SOL-GFVmiDwaWusNRE5pv1BSPpjTpsaWaByrsSM4dDjCpump"
+                href="https://phantom.com/tokens/solana/GFVmiDwaWusNRE5pv1BSPpjTpsaWaByrsSM4dDjCpump?referralId=efgft7u3se"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-[#FFFF00] text-black px-3 py-1.5 text-sm rounded-lg font-bold transition-all hover:bg-[#e6e600]"
